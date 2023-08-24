@@ -44,6 +44,8 @@ const Cart = ({ children }: { children?: ReactNode | undefined }) => {
       if (cart && cart.id) {
         const list = cart.products?.concat({ product, sizeSelect, count });
         CartAPI.update(cart.id, { products: list }).then(() => success('Thêm vào giỏ hàng thành công'));
+      } else {
+        navigate('/login');
       }
     }
   };

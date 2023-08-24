@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+.product:hover .modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: trans 0.4s forwards;
+}
+.product:not(:hover) .modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: re-trans 0.2s forwards;
+}
+@keyframes trans {
+  from {
+    transform: translate(-50%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes re-trans {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+.sidebar-open {
+  animation: sidebar-animation-open 0.5s forwards;
+}
+/* .sidebar-close {
+  animation: sidebar-animation-close 0.5s forwards;
+} */
+@keyframes sidebar-animation-open {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+/* @keyframes sidebar-animation-close {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(100%);
+  }
+} */
+.line {
+  width: 1px;
+  height: 20px;
+  background-color: #8e8e8e;
+}
+.account:hover ul {
+  display: flex;
+  animation: down-to-up 0.5s forwards;
+}
+@keyframes down-to-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.account ul:after {
+  content: '';
+  top: -20px;
+  width: 200px;
+  position: absolute;
+  height: 20px;
+}
+.ant-input {
+  border-radius: 6px 0 0 6px !important;
+}
+.search:hover .search_form {
+  display: block;
+}
+.search_form:after {
+  content: '';
+  top: -30px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  height: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .blog {
+    display: grid;
+    grid-template-columns: repeat(2, 49%) !important;
+  }
+}
+/* .ant-menu-item-selected {
+  background-color: none !important;
+  color: black !important;
+} */
+.ant-menu-vertical {
+  border-inline-end: none !important;
+}
+.ant-menu-item {
+  width: fit-content !important;
+  display: flex !important;
+  flex-direction: row-reverse;
+  gap: 2px;
+}
+.ant-menu-title-content {
+  font-size: 16px !important;
+}
+.ant-menu > .ant-menu-item:hover,
+.ant-menu > .ant-menu-submenu:hover,
+.ant-menu > .ant-menu-item-active,
+.ant-menu > .ant-menu-submenu-active,
+.ant-menu > .ant-menu-item-open,
+.ant-menu > .ant-menu-submenu-open,
+.ant-menu > .ant-menu-item-selected,
+.ant-menu > .ant-menu-submenu-selected {
+  color: black;
+  background-color: transparent !important;
+}
+.ant-btn-default:not(:disabled):hover {
+  color: white;
+}
+.delete:not(:disabled):hover {
+  color: red;
+}

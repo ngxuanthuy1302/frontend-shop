@@ -1,0 +1,40 @@
+.ant-menu-light .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+  color: white !important;
+}
+.ant-menu > .ant-menu-submenu-open {
+  color: white !important;
+}
+.ant-menu-item ~ .ant-menu-item-only-child {
+  color: white;
+}
+
+.ant-menu-light .ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+  color: white;
+}
+.ant-menu {
+  color: white;
+}
+.sidebar .ant-menu-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 50px !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+
+.sidebar .ant-menu-title-content {
+  margin-inline-start: 0px !important;
+}
+.sidebar .ant-menu-title-content:hover,
+.sidebar .ant-menu-item:hover,
+.sidebar .ant-menu-item-vertical:hover {
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
+}
+.ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title {
+  color: white;
+}
+.sidebar .ant-menu > .ant-menu-item-selected {
+  color: white;
+}
